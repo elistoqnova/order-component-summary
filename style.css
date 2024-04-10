@@ -1,0 +1,138 @@
+:root {
+  /* COLORS */
+  --clr-primary-pale: hsl(225, 100%, 94%);
+  --clr-primary-bright: hsl(245, 75%, 52%);
+
+  --clr-neutral-pale: hsl(225, 100%, 98%);
+  --clr-neutral-blue: hsl(224, 23%, 55%);
+  --clr-neutral-dark-blue: hsl(223, 47%, 23%);
+
+  /* FONT FAMILY */
+
+  --fs-primary: 16px;
+
+  --ff-primary: "Red Hat Display", sans-serif;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--fs-primary);
+  font-family: var(--ff-primary);
+}
+
+
+body {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--clr-primary-pale);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--clr-neutral-pale);
+  width: 450px;
+  text-align: center;
+  border-radius: 15px;
+  padding-bottom: 20px;
+}
+
+.container img {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.info {
+  padding-inline: 70px;
+  color: var(--clr-neutral-blue);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.outer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: hsla(225, 100%, 94%, 0.551);
+  margin-inline: 50px;
+  margin-block: 30px;
+  padding-block: 10px;
+  border-radius: 10px;
+}
+
+.price-name {
+  font-weight: var(--fw-black);
+}
+
+.price {
+  color: var(--clr-neutral-blue);
+}
+
+.plan-btn{
+  margin-left: 80px;
+  font-weight: var(--fw-bold);
+}
+
+.plan-btn:hover {
+  cursor: pointer;
+  color: var(--clr-neutral-blue);
+  text-decoration: none;
+  transition: ease-in-out 0.2s;
+}
+
+.payment {
+  width: 350px;
+  background-color: var(--clr-primary-bright);
+  color: var(--clr-neutral-pale);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  border-radius: 10px;
+  border:none;
+  box-shadow: 0px 15px 15px hsla(245, 75%, 52%, 0.3);
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.payment:hover {
+  cursor: pointer;
+  background-color: var(--clr-neutral-blue);
+  transition: ease-in-out 0.2s;
+}
+
+.cancel {
+  background-color: transparent;
+  color: var(--clr-neutral-blue);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  border: transparent;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.cancel:hover {
+  cursor: pointer;
+  color: var(--clr-neutral-dark-blue);
+  transition: ease-in-out 0.2s;
+}
+
+@media (max-width: 375px) {
+  .container, img {
+    width: 370px;
+  }
+}
+
+
